@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="future.finalprojectbeginner.CounterActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:background="@color/colorPrimary"
+        android:text="@string/title"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/containter"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="30dp"
+                android:gravity="center">
+                <!-- Layout TEAM A -->
+                <LinearLayout
+                    android:id="@+id/teamA_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/teamA_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily=""
+                        android:paddingLeft="35dp"
+                        android:paddingRight="35dp"
+                        android:text="@string/teamA"
+                        android:textColor="@color/colorPrimaryText"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/teamA_score"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/teamA_name"
+                        android:layout_gravity="center_horizontal"
+                        android:padding="10dp"
+                        android:text="@string/defaultValue"
+                        android:textSize="20sp" />
+
+                    <Button
+                        android:id="@+id/inc_A_100"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/colorPrimary"
+                        android:onClick="setScoreAInc100"
+                        android:text="@string/increment100" />
+
+                    <Button
+                        android:id="@+id/inc_A_50"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/colorPrimary"
+                        android:onClick="setScoreAInc50"
+                        android:text="@string/increment50" />
+
+                    <Button
+                        android:id="@+id/dec_A_50"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="30dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/colorPrimary"
+                        android:onClick="setScoreADec50"
+                        android:text="@string/decrement50" />
+
+                </LinearLayout>
+                <!-- Layout TEAM B -->
+                <LinearLayout
+                    android:id="@+id/teamB_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/teamB_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="35dp"
+                        android:paddingRight="35dp"
+                        android:text="@string/teamB"
+                        android:textColor="@color/colorPrimaryText"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/teamB_score"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/teamB_name"
+                        android:layout_gravity="center_horizontal"
+                        android:padding="10dp"
+                        android:text="@string/defaultValue"
+                        android:textSize="20sp" />
+
+                    <Button
+                        android:id="@+id/inc_B_100"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/colorPrimary"
+                        android:text="@string/increment100"
+                        android:onClick="setScoreBInc100"/>
+
+                    <Button
+                        android:id="@+id/inc_B_50"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/colorPrimary"
+                        android:text="@string/increment50"
+                        android:onClick="setScoreBInc50"/>
+
+                    <Button
+                        android:id="@+id/dec_B_50"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="30dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/colorPrimary"
+                        android:text="@string/decrement50"
+                        android:onClick="setScoreBDec50"/>
+
+                </LinearLayout>
+                <!-- Layout TEAM C -->
+                <LinearLayout
+                    android:id="@+id/teamC_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_gravity="right"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/teamC_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="35dp"
+                        android:paddingRight="35dp"
+                        android:text="@string/teamC"
+                        android:textColor="@color/colorPrimaryText"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/teamC_score"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/teamC_name"
+                        android:layout_gravity="center_horizontal"
+                        android:padding="10dp"
+                        android:text="@string/defaultValue"
+                        android:textSize="20sp" />
+
+                    <Button
+                        android:id="@+id/inc_C_100"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/colorPrimary"
+                        android:text="@string/increment100"
+                        android:onClick="setScoreCInc100"/>
+
+                    <Button
+                        android:id="@+id/inc_C_50"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/colorPrimary"
+                        android:text="@string/increment50"
+                        android:onClick="setScoreCInc50"/>
+
+                    <Button
+                        android:id="@+id/dec_C_50"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="30dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/colorPrimary"
+                        android:text="@string/decrement50"
+                        android:onClick="setScoreCDec50"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <!-- Reset and Exit Button Layout -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@id/containter"
+                android:layout_gravity="center"
+                android:layout_marginTop="60dp">
+
+                <Button
+                    android:id="@+id/reset"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginRight="15dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:text="@string/reset"
+                    android:onClick="reset"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/teamB_layout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@id/reset"
+                    android:background="@color/colorPrimaryDark"
+                    android:text="@string/exit"
+                    android:onClick="back"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>
